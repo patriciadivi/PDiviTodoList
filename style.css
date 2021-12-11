@@ -4,7 +4,7 @@
     font-family: 'Ubuntu';
 }
 
-/* h1 {
+h1 {
     margin: 1rem;
     padding: 1rem;
     border-radius: .5rem;
@@ -20,6 +20,12 @@
     max-width: 350px;
     margin: .7rem auto;
 
+    text-align: center;
+
+}
+
+#lista-tarefas {
+    margin: .8rem 0;
     text-align: center;
 
 }
@@ -51,4 +57,4 @@
     margin: 0 auto;
     border-radius: .2rem;
 
-} */
+}
