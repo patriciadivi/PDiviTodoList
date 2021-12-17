@@ -23,26 +23,28 @@ function mostrarNatela(){
     })
 
 
-tagOlList.addEventListener("click", function(envet) {
-    console.log(tagOlList);
-    let listItems = document.querySelectorAll('li')
-
+tagOlList.addEventListener("click", function(event) {
+    
     let colorWhite = "white"
     let backgroundColorGray = "rgb(128, 128, 128)"
 
-    for (let positionNow = 0; positionNow < listItems.length; positionNow += 1) {
+    let newSelect = event.target
+    let select = document.querySelector('.select')
+    console.log(select);
 
-        if (listItems[positionNow].style.backgroundColor === backgroundColorGray) {
-
-            envet.target.style.backgroundColor = colorWhite
-
-        } else {
-
-            envet.target.style.backgroundColor =  backgroundColorGray
-        }
+    if (select === newSelect) {
+        select.style.backgroundColor = colorWhite
+        select.classList.remove('select')
+        return;
     }
+    if (select !== null) {
+        select.style.backgroundColor = colorWhite
+        select.classList.remove('select')
+    } 
+    newSelect.style.backgroundColor = backgroundColorGray
+    newSelect.classList.add('select')
 })
-   
+
 
 
 
