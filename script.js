@@ -14,15 +14,15 @@ function mostrarNatela(){
         } else {
     
             const createTagLi = document.createElement('li')
-            createTagLi.classList.add('completed')
             createTagLi.innerText = tagInputText.value
     
             tagInputText.value = ""
             tagOlList.appendChild(createTagLi)
         }
+        
     })
 
-
+// Obs: Matheus Henrique me ajudou na parte da Lógica para o codigo 
 tagOlList.addEventListener("click", function(event) {
     
     let colorWhite = "white"
@@ -41,25 +41,30 @@ tagOlList.addEventListener("click", function(event) {
         select.style.backgroundColor = colorWhite
         select.classList.remove('select')
     } 
-    newSelect.style.backgroundColor = backgroundColorGray
-    newSelect.classList.add('select')
+        newSelect.style.backgroundColor = backgroundColorGray
+        newSelect.classList.add('select')
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Obs: Ladylane me a ajudou a entender o do porque usar o "children" ao invés da propria "li"
+tagOlList.addEventListener("dblclick", function (event) {
+        console.log("entrei no evento");
+    let newCompleted = event.target
+    let classCompleted = document.querySelector('.completed')
+    console.log(classCompleted);
+    
+    if (newCompleted === classCompleted) {
+        classCompleted.style.textDecoration = "none" 
+        classCompleted.classList.remove('completed')
+        return;  
+    }
+    if (classCompleted !== null) {
+        classCompleted.style.textDecoration = "none" 
+        classCompleted.classList.remove('completed')        
+    }
+        newCompleted.style.textDecoration = "line-through"
+        newCompleted.classList.add('completed')
+})
 
 
 }
