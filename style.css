@@ -30,10 +30,15 @@ h1 {
 
 }
 
-.sectionInput, #criar-tarefa{
+.sectionInput {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
 
+}
+
+#sectionButton {
+    margin: 0.8rem auto 1rem;
 }
 
 #texto-tarefa {
@@ -50,15 +55,12 @@ h1 {
 
 }
 
-#criar-tarefa {
+#criar-tarefa, .apagar-tarefa{
     height: 2rem;
     
-    padding: .3rem;
+    padding: .4rem;
     margin: 0 auto;
     border-radius: .2rem;
 
 }
 
-/* .completed {
-    text-decoration: line-through;
-} */

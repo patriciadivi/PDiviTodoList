@@ -1,15 +1,14 @@
 let tagInputText = document.querySelector('#texto-tarefa')
 let tagOlList = document.querySelector('#lista-tarefas')
 let tagButton = document.querySelector('#criar-tarefa')
-
-
+let buttonDelete = document.querySelector('#apaga-tudo')
 
 
 function mostrarNatela(){
     // console.log("entrei na function")
     tagButton.addEventListener("click", function() {
         if (tagInputText.value === '') {
-            alert("Olá, Seja Bem-Vindo! Digite um texto")
+            alert("Digite um texto!")
             return (false)
         } else {
     
@@ -66,10 +65,12 @@ tagOlList.addEventListener("dblclick", function (event) {
         newCompleted.classList.add('completed')
 })
 
+buttonDelete.addEventListener("click", function () {
+
+    tagOlList.innerText = ''
+
+})
+
 
 }
 mostrarNatela()
-
-
-
-
